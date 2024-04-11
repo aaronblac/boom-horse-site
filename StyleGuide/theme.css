@@ -111,15 +111,15 @@ div.box {
     margin: 0 10px 0 10px;
 }
 
-#primary1 {
+.primary1 {
     background-color: #425467;
 }
 
-#primary2 {
+.primary2 {
     background-color: #434267;
 }
 
-#primary3 {
+.primary3 {
     background-color: #426767;
 }
 

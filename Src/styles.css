@@ -1,0 +1,245 @@
+:root{
+    --primary1: #425467;
+    --primary2: #434267;
+    --primary3: #426767;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1.42857143;
+    background-color: #ffffff;
+    margin: 0;
+    color: black;
+}
+html {
+    font-size: 16px;
+    font-family: "Montserrat", Arial, "sans-serif";
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+main{
+    padding:4rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+.page-header{
+    padding: 0.5rem 4rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-header .boomhorse-logo{
+    height:3rem;
+}
+
+.page-header nav{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.page-header nav a{
+    color: white;
+    text-decoration:none;
+    font-weight:500;
+    font-size: 1.25rem;
+    padding:0 0.25rem;
+    transition: background-color 0.2s ease;
+}
+
+.page-header nav a:has(.nav-cart){
+    line-height:0;
+    padding: 0.25rem;
+}
+
+.page-header nav a:hover{
+    color:var(--primary1);
+    background-color:#ffffff;
+    border-radius:0.5rem;
+} 
+
+.nav-cart{
+    height: 2rem;
+    filter: invert(100%) sepia(73%) saturate(0%) hue-rotate(358deg) brightness(107%) contrast(100%);
+    background-color: transparent;
+}
+.page-header nav a:hover .nav-cart{
+    filter: invert(30%) sepia(6%) saturate(2517%) hue-rotate(171deg) brightness(90%) contrast(81%);;
+}
+
+.page-footer{
+    background-color: var(--primary1);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:0.5rem;
+    justify-content: center;
+    padding:2rem 4rem;
+    color:#ffffff;
+    position:absolute;
+    width:100dvw;
+    bottom:0;
+}
+
+.page-footer a{
+    text-decoration: none;
+}
+
+.page-footer a.contact{
+    font-size:1.25rem;
+    color:#ffffff;
+    padding:0 0.25rem;
+    border-radius:0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.page-footer a.contact:hover{
+    background-color:#ffffff;
+    color:var(--primary1);
+}
+/* Button */
+button {
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    font-weight: 500;
+    color: white;
+}
+
+.button-primary{
+    background-color: var(--primary3);
+    border:none;
+}
+
+.button-secondary{
+    background-color: var(--primary2);
+    border:none;
+}
+
+.button-primary:hover,
+.button-secondary:hover{
+    opacity:90%;
+}
+
+.button-tertiary{
+    background-color: transparent;
+    color:var(--primary3);
+    border:2px solid var(--primary3);
+    padding:.375rem 1rem
+}
+
+.button-tertiary:hover{
+    background-color: var(--primary3);
+    color:white;
+}
+/* Form Elements */
+input {
+    line-height: normal;
+}
+.input-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: .25rem;
+}
+
+input.input-field,
+textarea {
+    padding: .425rem;
+    border: 2px solid var(--primary3);
+    border-radius:5px;
+}
+
+input[type=text]:focus,
+textarea:focus{
+    border: 2px solid var(--primary2);
+    outline:none;
+}
+
+input[type=radio],
+input[type=checkbox]{
+    accent-color: var(--primary3);
+}
+
+div.box {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    margin: 0 10px 0 10px;
+}
+
+.primary1 {
+    background-color: var(--primary1);
+}
+
+.primary2 {
+    background-color: var(--primary2);
+}
+
+.primary3 {
+    background-color: var(--primary3);
+}
+
+.warning {
+    background-color: #e8a530;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.danger {
+    background-color: #c91d25;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.success {
+    background-color: #73b234;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Flex */
+.flex{
+    display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+/* Gap */
+.gap-12{
+    gap: .75rem;
+}
+
+.gap-16{
+    gap: 1rem;
+}
