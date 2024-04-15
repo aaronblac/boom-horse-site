@@ -449,7 +449,7 @@ div.box {
 
 @media screen and (min-width: 1200px){
     main{
-        min-height: calc(100dvh - 12rem);
+        min-height: calc(100dvh - 11.625rem);
     }
     .grid-cols-5__xl{
         grid-template-columns: repeat(5,1fr);
