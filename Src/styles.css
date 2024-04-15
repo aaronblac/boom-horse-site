@@ -271,7 +271,7 @@ div.box {
 
 .breadcrumb-link{
     color:var(--primary2);
-    padding:0 0.25rem;
+    padding:0.25rem;
     border-radius:0.5rem;
     text-decoration: none;
     width:max-content;
