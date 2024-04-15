@@ -1,4 +1,4 @@
 [build]
   command = "echo 'default context'" 
-  base = "boom-horse-site/"
+  base = "boom-horse-site"
   publish = "src/"
