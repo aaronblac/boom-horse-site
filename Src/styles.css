@@ -478,6 +478,7 @@ div.box {
 }
 @media screen and (min-width: 1536px){
     main{
+        width:100%;
         margin:auto;
     }
 }
