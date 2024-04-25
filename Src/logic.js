@@ -5,7 +5,7 @@ $(function() {
     const itemCardTemplate = $("#itemCardTemplate").html();
     Mustache.parse(itemCardTemplate);
     const itemCardRendered = Mustache.render(itemCardTemplate, { itemCard: data.products,currentIndex: (currentCard, index) => index });
-    $("#FeaturedItemsHome").html(itemCardRendered);
+    $("#FeaturedItems").html(itemCardRendered);
 
     // sizes
     const sizeCheckboxTemplate = $("#sizeCheckboxTemplate").html();
