@@ -129,24 +129,26 @@
                     <div class="text-center">
                         <strong class="">Similar Items</strong>
                     </div>
-                    <div id="FeaturedItems" class="grid grid-cols-2__sm grid-cols-3__md grid-cols-4__lg grid-cols-1__xl gap-2 mt-1">
-                        <script id="itemCardTemplate" type="text/x-mustache-template">
-                            {{ #itemCard }}
-                                <div class="card p-2 gap-1 round flex flex-column align-content-center ">
-                                    <div class="container--item-thumb">
-                                        <img src="{{ image }}" alt="{{ name }} Image">
+                    <div class="featured-items-short">
+                        <div id="FeaturedItems" class="grid grid-cols-2__sm grid-cols-3__md grid-cols-4__lg grid-cols-1__xl gap-2 mt-1">
+                            <script id="itemCardTemplate" type="text/x-mustache-template">
+                                {{ #itemCard }}
+                                    <div class="card p-2 gap-1 round flex flex-column align-content-center ">
+                                        <div class="container--item-thumb">
+                                            <img src="{{ image }}" alt="{{ name }} Image">
+                                        </div>
+                                        <div class=" text-center">
+                                            <span>{{ name }}</span>
+                                        </div>
+                                        <div class="flex justify-content-center">
+                                            <a href="view-item.html">
+                                                <button role="button" class="button-primary button-small">View Item</button>
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class=" text-center">
-                                        <span>{{ name }}</span>
-                                    </div>
-                                    <div class="flex justify-content-center">
-                                        <a href="view-item.html">
-                                            <button role="button" class="button-primary button-small">View Item</button>
-                                        </a>
-                                    </div>
-                                </div>
-                            {{ /itemCard }}
-                        </script>
+                                {{ /itemCard }}
+                            </script>
+                        </div>
                     </div>
                 </div>
             </div>
