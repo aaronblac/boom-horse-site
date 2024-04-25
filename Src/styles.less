@@ -410,7 +410,7 @@ textarea:focus-visible{
         min-height:calc(100dvh - 11.25rem);
     }
     #FeaturedItemsHome{
-        max-height: rem;
+        max-height: 49rem;
         overflow:scroll;
     }
     .grid-cols-1__lg{
@@ -436,6 +436,10 @@ textarea:focus-visible{
 @media screen and (min-width: 1200px){
     main{
         min-height: calc(100dvh - 11.625rem);
+    }
+    #FeaturedItemsHome{
+        max-height: 28rem;
+        overflow:scroll;
     }
     .grid-cols-5__xl{
         grid-template-columns: repeat(5,1fr);
@@ -472,6 +476,12 @@ textarea:focus-visible{
         border-left:@border-base;
         border-right:none;
         border-bottom:none;
+    }
+}
+@media screen and (in-width: 11485px){
+    #FeaturedItemsHome{
+        max-height: 27rem;
+        overflow:scroll;
     }
 }
 @media screen and (min-width: 1536px){
