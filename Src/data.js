@@ -42,6 +42,7 @@ const products = [
     }
 ];
 
+//possibly use in future
 const sizes = ["Small", "Medium", "Large", "X-large", "XX-Large"];
 
 const gender = ["Men's", "Women's", "Unisex"];
