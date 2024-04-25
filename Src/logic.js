@@ -1,29 +1,28 @@
 import data from "./data.js";
-import mustache from './mustache.js';
 
 $(function() {
     // itemCard
     const itemCardTemplate = $("#itemCardTemplate").html();
-    mustache.Mustache.parse(itemCardTemplate);
-    const itemCardRendered = mustache.Mustache.render(itemCardTemplate, { itemCard: data.products });
+    Mustache.parse(itemCardTemplate);
+    const itemCardRendered = Mustache.render(itemCardTemplate, { itemCard: data.products,currentIndex: (currentCard, index) => index });
     $("#FeaturedItemsHome").html(itemCardRendered);
 
     // sizes
     const sizeCheckboxTemplate = $("#sizeCheckboxTemplate").html();
-    mustache.Mustache.parse(sizeCheckboxTemplate);
-    const sizeCheckboxRendered = mustache.Mustache.render(sizeCheckboxTemplate, { size: data.sizes });
+    Mustache.parse(sizeCheckboxTemplate);
+    const sizeCheckboxRendered = Mustache.render(sizeCheckboxTemplate, { size: data.sizes });
     $("#SizeCheckboxes").html(sizeCheckboxRendered);
 
     // gender
     const genderTemplate = $("#genderCheckboxTemplate").html();
-    mustache.Mustache.parse(genderTemplate);
-    const genderRendered = mustache.Mustache.render(genderTemplate, { gender: data.gender });
+    Mustache.parse(genderTemplate);
+    const genderRendered = Mustache.render(genderTemplate, { gender: data.gender });
     $("#GenderCheckboxes").html(genderRendered);
 
     // type
     const typeCheckboxTemplate = $("#typeCheckboxTemplate").html();
-    mustache.Mustache.parse(typeCheckboxTemplate);
-    const typeCheckboxRendered = mustache.Mustache.render(typeCheckboxTemplate, { type: data.type });
+    Mustache.parse(typeCheckboxTemplate);
+    const typeCheckboxRendered = Mustache.render(typeCheckboxTemplate, { type: data.type });
     $("#TypeCheckboxes").html(typeCheckboxRendered);
 });
 
