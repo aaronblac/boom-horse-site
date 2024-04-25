@@ -88,7 +88,7 @@
                         <div id="FeaturedItemsHome" class="grid grid-cols-2__sm grid-cols-3__md grid-cols-1__lg grid-cols-2__xl gap-3">
                             <script id="itemCardTemplate" type="text/x-mustache-template">
                                 {{ #itemCard }}
-                                {{#if (@index < getNumberOfProductsToDisplay())}} 
+                                {{#if (@index < getNumberOfItemCards())}} 
                                     <div class="card p-2 gap-1 round flex flex-column align-content-center ">
                                         <div class="container--item-thumb">
                                             <img src="{{ image }}" alt="{{ name }} Image">
