@@ -4,7 +4,7 @@ $(function() {
     // itemCard
     const itemCardTemplate = $("#itemCardTemplate").html();
     Mustache.parse(itemCardTemplate);
-    const itemCardRendered = Mustache.render(itemCardTemplate, { itemCard: data.products,currentIndex: (currentCard, index) => index });
+    const itemCardRendered = Mustache.render(itemCardTemplate, { itemCard: data.products });
     $("#FeaturedItems").html(itemCardRendered);
 
     // sizes
