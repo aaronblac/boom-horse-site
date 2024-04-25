@@ -25,13 +25,13 @@ $(function() {
     const typeCheckboxRendered = Mustache.render(typeCheckboxTemplate, { type: data.type });
     $("#TypeCheckboxes").html(typeCheckboxRendered);
     
-    const getNumberOfItemCards = () => {
-        if (window.innerWidth >= 992) { 
-            return 4;
-          } 
-    }
+    // const getNumberOfItemCards = () => {
+    //     if (window.innerWidth >= 992) { 
+    //         return 4;
+    //       } 
+    // }
     
     
-    const numberOfCards = getNumberOfItemCards();
-    console.log(numberOfCards);
+    // const numberOfCards = getNumberOfItemCards();
+    // console.log(numberOfCards);
 });
