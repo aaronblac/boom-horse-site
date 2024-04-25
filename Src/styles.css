@@ -345,6 +345,10 @@ textarea:focus-visible {
   main {
     min-height: calc(88.75dvh);
   }
+  #FeaturedItemsHome {
+    max-height: rem;
+    overflow: scroll;
+  }
   .grid-cols-1__lg {
     grid-template-columns: repeat(1, 1fr);
   }
