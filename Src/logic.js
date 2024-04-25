@@ -31,3 +31,7 @@ const getNumberOfItemCards = () => {
         return 4;
       } 
 }
+
+
+const numberOfCards = getNumberOfItemCards();
+console.log(numberOfCards);
