@@ -43,10 +43,11 @@ html {
 }
 
 main{
+    flex:1;
     padding:1.5rem 1rem;
     max-width: 95rem;
     overflow:auto;
-    min-height: calc(100dvh - 10.25rem);
+    min-height: ~"calc(100dvh - 10.25rem)";
 }
 
 h1 {
@@ -407,7 +408,7 @@ textarea:focus-visible{
 }
 @media screen and (min-width: 992px){
     main{
-        min-height:calc(100dvh - 11.25rem);
+        min-height:~"calc(100dvh - 11.25rem)";
     }
     .featured-items-short{
         max-height: 49rem;
@@ -435,7 +436,8 @@ textarea:focus-visible{
 
 @media screen and (min-width: 1200px){
     main{
-        min-height: calc(100dvh - 11.625rem);
+        min-height: ~"calc(100dvh - 11.625rem)";
+        padding:4rem;
     }
     .featured-items-short{
         max-height: 27rem;
@@ -449,9 +451,6 @@ textarea:focus-visible{
     }
     .grid-cols-1__xl{
         grid-template-columns: repeat(1,1fr);
-    }
-    main{
-        padding:4rem;
     }
     .page-header{
         padding:0.5rem 4rem;
