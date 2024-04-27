@@ -296,7 +296,6 @@ textarea:focus-visible {
   justify-content: center;
   position: relative;
   height: 8rem;
-  background-color: #f8f8fa;
   border-radius: 1rem;
 }
 .container--item-thumb.view-item-thumb {
