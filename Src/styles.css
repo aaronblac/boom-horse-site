@@ -126,7 +126,7 @@ ul {
 /* Button */
 button {
   border-radius: 0.5rem;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   font-weight: 500;
   color: #ffffff;
   width: max-content;
@@ -157,14 +157,14 @@ button.button-tertiary {
   background-color: transparent;
   color: #434267;
   border: 2px solid #434267;
-  padding: .375rem 1rem;
+  padding: 0.375rem 1rem;
 }
 button.button-tertiary:hover {
   background-color: #434267;
   color: white;
 }
 button.button-small {
-  padding: .25rem 0.5rem;
+  padding: 0.25rem 0.5rem;
   font-size: 0.825rem;
 }
 /* Form Elements */
@@ -181,11 +181,11 @@ input.input-field.thin {
 .input-label {
   font-size: 0.875rem;
   font-weight: 500;
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 input.input-field,
 textarea.textarea-field {
-  padding: .425rem;
+  padding: 0.425rem;
   border: 2px solid #434267;
   border-radius: 0.5rem;
 }
