@@ -333,7 +333,6 @@ textarea:focus-visible {
 .bh-mobile-menu li {
   padding: 0.25rem 0.5rem;
   font-weight: 600;
-  z-index: 3;
 }
 .bh-mobile-menu li button.close {
   background-color: #fff;
@@ -359,7 +358,7 @@ textarea:focus-visible {
   height: 100dvh;
   background-color: rgba(0, 0, 0, 0.2);
   /* Adjust the opacity here */
-  z-index: 1;
+  z-index: -1;
   /* Ensure it's above other content */
 }
 /* Media Queries */
