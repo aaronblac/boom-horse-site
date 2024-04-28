@@ -410,22 +410,22 @@ textarea:focus-visible{
             line-height: 1;
         }
     }
+    &.dropdown-menu.show{
+        z-index: 2;
+        /* Styles for the semi-transparent backdrop */
+        &:before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100dvw;
+            height: 100dvh;
+            background-color: rgba(0, 0, 0, 0.2); /* Adjust the opacity here */
+            z-index: -1; /* Ensure it's above other content */
+        }
+    }
 }
 
-.dropdown-menu.show{
-    z-index: 2;
-}
-/* Styles for the semi-transparent backdrop */
-.dropdown-menu.show:before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100dvw;
-    height: 100dvh;
-    background-color: rgba(0, 0, 0, 0.2); /* Adjust the opacity here */
-    z-index: -1; /* Ensure it's above other content */
-}
 
 /* Media Queries */
 @media screen and (min-width: 550px){
