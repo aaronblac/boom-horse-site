@@ -46,16 +46,6 @@ $(function() {
             showItem ? item.show() : item.hide();
         })
     }
-
-    //Contact form
-    const contactForm = document.getElementById('ContactForm');
-    const contactFormContainer = document.getElementById('ContactFormContainer');
-    const messageSent = document.getElementById('MessageSent');
-    contactForm.addEventListener("submit", event => {
-        event.preventDefault();
-        contactFormContainer.style.display = "none";
-        messageSent.style.display = "block"
-    })
     //Mobile Dropdown logic
     // JavaScript to show/hide the backdrop when the dropdown is toggled
     // document.querySelectorAll('.dropdown-toggle').forEach(function (dropdownToggle) {
