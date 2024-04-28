@@ -82,4 +82,4 @@ const gender = ["Men's", "Women's", "Unisex"];
 const type = ["Long Sleeve", "T-shirts", "Tank Tops", "Hats", "Skateboards", "Stickers", "Mugs"];
 
 
-export default {products, sizes, gender, type};
+export default {products, size, gender, type};
