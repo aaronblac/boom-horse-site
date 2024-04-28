@@ -333,6 +333,7 @@ textarea:focus-visible {
 .bh-mobile-menu li {
   padding: 0.25rem 0.5rem;
   font-weight: 600;
+  z-index: 3;
 }
 .bh-mobile-menu li button.close {
   background-color: #fff;
@@ -347,7 +348,6 @@ textarea:focus-visible {
 }
 .dropdown-menu.show {
   z-index: 2;
-  border: 1px solid #fff;
 }
 /* Styles for the semi-transparent backdrop */
 .dropdown-menu.show:before {
