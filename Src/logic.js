@@ -25,13 +25,28 @@ $(function() {
     const typeCheckboxRendered = Mustache.render(typeCheckboxTemplate, { type: data.type });
     $("#TypeCheckboxes").html(typeCheckboxRendered);
     
-    // const getNumberOfItemCards = () => {
-    //     if (window.innerWidth >= 992) { 
-    //         return 4;
-    //       } 
-    // }
-    
-    
-    // const numberOfCards = getNumberOfItemCards();
-    // console.log(numberOfCards);
+    $(document).on('change','input[type=checkbox', () => {
+        filterItems();
+    })
+
+    const filterItems = () => {
+        const checkedAttributes = $('input[type=checkbox]:checked').map(function() {
+            $(this).data('attribute');
+        }).get();
+
+        $('.item').each(function() {
+            const item = $(this);
+            let showItem = true;
+
+            checkedAttributes.forEach(attribute => {
+                const value = item.data(attribute);
+                if(!($(`#checkbox-${attribute}-${value}`).prop('checked'))) {
+                    showItem = false;
+                    return false;
+                }
+            });
+
+            showItem ? item.show() : item.hide();
+        })
+    }
 });
