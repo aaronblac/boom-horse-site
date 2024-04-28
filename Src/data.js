@@ -75,11 +75,11 @@ const products = [
 ];
 
 //possibly use in future
-const sizes = ["Small", "Medium", "Large", "X-large", "XX-Large"];
+const size = ["X-Small", "Small", "Medium", "Large", "X-large", "XX-Large"];
 
 const gender = ["Men's", "Women's", "Unisex"];
 
-const type = ["Long Sleeve", "T-shirts", "Tank Tops", "Hats", "Skateboards", "Stickers", "Bags", "Mugs"];
+const type = ["Long Sleeve", "T-shirts", "Tank Tops", "Hats", "Skateboards", "Stickers", "Mugs"];
 
 
 export default {products, sizes, gender, type};

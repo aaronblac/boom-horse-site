@@ -10,19 +10,19 @@ $(function() {
     // sizes
     const sizeCheckboxTemplate = $("#sizeCheckboxTemplate").html();
     Mustache.parse(sizeCheckboxTemplate);
-    const sizeCheckboxRendered = Mustache.render(sizeCheckboxTemplate, { size: data.sizes });
+    const sizeCheckboxRendered = Mustache.render(sizeCheckboxTemplate, { size: data.size, products: data.products });
     $("#SizeCheckboxes").html(sizeCheckboxRendered);
 
     // gender
     const genderTemplate = $("#genderCheckboxTemplate").html();
     Mustache.parse(genderTemplate);
-    const genderRendered = Mustache.render(genderTemplate, { gender: data.gender });
+    const genderRendered = Mustache.render(genderTemplate, { gender: data.gender, products: data.products });
     $("#GenderCheckboxes").html(genderRendered);
 
     // type
     const typeCheckboxTemplate = $("#typeCheckboxTemplate").html();
     Mustache.parse(typeCheckboxTemplate);
-    const typeCheckboxRendered = Mustache.render(typeCheckboxTemplate, { type: data.type });
+    const typeCheckboxRendered = Mustache.render(typeCheckboxTemplate, { type: data.type, products: data.products });
     $("#TypeCheckboxes").html(typeCheckboxRendered);
     
     $(document).on('change','input[type=checkbox', () => {
