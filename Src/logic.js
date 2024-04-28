@@ -49,11 +49,11 @@ $(function() {
 
     //Contact form
     const contactForm = document.getElementById('ContactForm');
+    const contactFormContainer = document.getElementById('ContactFormContainer');
     const messageSent = document.getElementById('MessageSent');
-    messageSent.style.display = "none";
     contactForm.addEventListener("submit", event => {
         event.preventDefault();
-        contactForm.style.display = "none";
+        contactFormContainer.style.display = "none";
         messageSent.style.display = "block"
     })
     //Mobile Dropdown logic

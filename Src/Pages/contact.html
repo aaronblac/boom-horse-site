@@ -58,8 +58,8 @@
         </header>
         <main>
             <h1 class="text-center">Contact Us</h1>
-            <div id="ContactForm">
-                <form class="card bdr-1 round p-3 contact-form">
+            <div id="ContactFormContainer">
+                <form action="submit" class="card bdr-1 round p-3 contact-form" id="ContactForm">
                     <div class="mb-3">
                       <label for="inputName" class="input-label">Name</label>
                       <input type="text" class="input-field form-control" required id="inputName" aria-describedby="Name">
@@ -81,7 +81,7 @@
                     </div>
                 </form>
             </div>
-            <div class="card bdr-1 round p-3 my-3 text-center flex flex-column align-items-center justify-content-center gap-2" id="MessageSent">
+            <div class="card bdr-1 round p-3 my-3 text-center flex flex-column align-items-center justify-content-center gap-2" id="MessageSent" style="display:none;">
                 <h3 class="c-p2">Message Sent!</h3>
                 <a href="../index.html">
                     <button class="button-primary w-50">Return Home</button>
