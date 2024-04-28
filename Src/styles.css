@@ -326,7 +326,7 @@ textarea:focus-visible {
   margin: auto;
 }
 .bh-mobile-menu {
-  --bs-border-radius: 0 0 0.5rem 0.5rem;
+  --bs-border-radius: 0 0 1rem 1rem;
   transform: translate(0) !important;
   width: 100dvw;
 }
@@ -339,10 +339,11 @@ textarea:focus-visible {
   border-radius: 0.5rem;
   color: inherit;
   position: absolute;
-  top: 0.75rem;
+  top: 1rem;
   right: 0.5rem;
-  padding: 0.25rem;
+  padding: 0 0.25rem 0.1rem;
   box-shadow: none;
+  font-size: 1.25rem;
   line-height: 1;
 }
 .dropdown-menu.show {
