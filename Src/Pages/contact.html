@@ -58,27 +58,29 @@
         </header>
         <main>
             <h1 class="text-center">Contact Us</h1>
-            <form class="card bdr-1 round p-3 contact-form" id="ContactForm">
-                <div class="mb-3">
-                  <label for="inputName" class="input-label">Name</label>
-                  <input type="text" class="input-field form-control" required id="inputName" aria-describedby="Name">
-                </div>
-                <div class="mb-3">
-                  <label for="inputEmail" class="input-label">Email address</label>
-                  <input type="email" class="input-field form-control" id="inputEmail" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                  <label for="inputPhone" class="input-label">Phone Number</label>
-                  <input type="phone" class="input-field form-control" id="inputPhone" aria-describedby="phoneHelp">
-                </div>
-                <div class="mb-3">
-                    <label class="input-label" for="floatingTextarea2">Comments</label>
-                    <textarea  class="textarea-field form-control" placeholder="Leave a comment here" id="floatingTextarea2" ></textarea>
-                </div>
-                <div class="flex justify-content-center">
-                    <button type="submit" class="button button-secondary w-50">Submit</button>
-                </div>
-            </form>
+            <div id="ContactForm">
+                <form class="card bdr-1 round p-3 contact-form">
+                    <div class="mb-3">
+                      <label for="inputName" class="input-label">Name</label>
+                      <input type="text" class="input-field form-control" required id="inputName" aria-describedby="Name">
+                    </div>
+                    <div class="mb-3">
+                      <label for="inputEmail" class="input-label">Email address</label>
+                      <input type="email" class="input-field form-control" id="inputEmail" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="inputPhone" class="input-label">Phone Number</label>
+                      <input type="phone" class="input-field form-control" id="inputPhone" aria-describedby="phoneHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label class="input-label" for="floatingTextarea2">Comments</label>
+                        <textarea  class="textarea-field form-control" placeholder="Leave a comment here" id="floatingTextarea2" ></textarea>
+                    </div>
+                    <div class="flex justify-content-center">
+                        <button type="submit" class="button button-secondary w-50">Submit</button>
+                    </div>
+                </form>
+            </div>
             <div class="card bdr-1 round p-3 my-3 text-center flex flex-column align-items-center justify-content-center gap-2" style="display:none;">
                 <h3 class="c-p2">Message Sent!</h3>
                 <a href="../index.html">

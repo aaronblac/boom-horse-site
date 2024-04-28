@@ -50,6 +50,7 @@ $(function() {
     //Contact form
     const contactForm = document.getElementById('ContactForm');
     const messageSent = document.getElementById('MessageSent');
+    messageSent.style.display = "none";
     contactForm.addEventListener("submit", event => {
         event.preventDefault();
         contactForm.style.display = "none";
