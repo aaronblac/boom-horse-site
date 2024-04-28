@@ -1,28 +1,28 @@
-import { products, size, gender, type } from "./data.js";
+import data from "./data.js";
 
 $(function() {
     // itemCard
     const itemCardTemplate = $("#itemCardTemplate").html();
     Mustache.parse(itemCardTemplate);
-    const itemCardRendered = Mustache.render(itemCardTemplate, { itemCard: products });
+    const itemCardRendered = Mustache.render(itemCardTemplate, { itemCard: data.products });
     $("#FeaturedItems").html(itemCardRendered);
 
     // sizes
     const sizeCheckboxTemplate = $("#sizeCheckboxTemplate").html();
     Mustache.parse(sizeCheckboxTemplate);
-    const sizeCheckboxRendered = Mustache.render(sizeCheckboxTemplate, { size: size, products: products });
+    const sizeCheckboxRendered = Mustache.render(sizeCheckboxTemplate, { size: data.size, products: data.products });
     $("#SizeCheckboxes").html(sizeCheckboxRendered);
 
     // gender
     const genderTemplate = $("#genderCheckboxTemplate").html();
     Mustache.parse(genderTemplate);
-    const genderRendered = Mustache.render(genderTemplate, { gender: gender, products: products });
+    const genderRendered = Mustache.render(genderTemplate, { gender: data.gender, products: data.products });
     $("#GenderCheckboxes").html(genderRendered);
 
     // type
     const typeCheckboxTemplate = $("#typeCheckboxTemplate").html();
     Mustache.parse(typeCheckboxTemplate);
-    const typeCheckboxRendered = Mustache.render(typeCheckboxTemplate, { type: type, products: products });
+    const typeCheckboxRendered = Mustache.render(typeCheckboxTemplate, { type: data.type, products: data.products });
     $("#TypeCheckboxes").html(typeCheckboxRendered);
     
     $(document).on('change','input[type=checkbox', () => {
