@@ -31,7 +31,7 @@ $(function() {
 
     const filterItems = () => {
         const checkedAttributes = $('input[type=checkbox]:checked').map(function() {
-            $(this).data('attribute');
+            return $(this).data('attribute');
         }).get();
 
         $('.item').each(function() {
