@@ -40,7 +40,8 @@
                         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                     </svg>
                 </button>
-                <ul class="dropdown-menu text-center gap-2 p-3 primary2 dropdown-menu-end">
+                <ul class="dropdown-menu bh-mobile-menu text-center gap-2 p-3 primary2 dropdown-menu-end">
+                    <li><button type="button" class="close">&times;</button></li>
                     <li class="my-2">
                         <a href="../index.html">Home</a>
                     </li>
@@ -68,74 +69,48 @@
                         </button>
                         <ul class="dropdown-menu bdr-1 bdr-tertiary dropdown-menu-end p-2">
                             <li class="py-2">
-                                <label class="input-label" for="mobileSizeList">Size:</label>
-                                <ul id="mobileSizeList">
-                                    <li>
-                                        <input type="checkbox" id="mobileSizeSmall" name="mobileSizeCheckboxes" checked>
-                                        <label for="mobileSizeSmall" class="input-label">Small</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="mobileSizeMedium" name="mobileSizeCheckboxes" >
-                                        <label for="mobileSizeMedium" class="input-label">Medium</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="mobileSizeLarge" name="mobileSizeCheckboxes" checked>
-                                        <label for="mobileSizeLarge" class="input-label">Large</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="mobileSizeX-Large" name="mobileSizeCheckboxes" >
-                                        <label for="mobileSizeX-Large" class="input-label">X-Large</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="mobileSizeXX-Large" name="mobileSizeCheckboxes" >
-                                        <label for="mobileSizeXX-Large" class="input-label">XX-Large</label>
-                                    </li>
+                                <label class="input-label" for="MobileSizeCheckboxes">Size:</label>
+                                <ul id="MobileSizeCheckboxes">
+                                    <script id="mobileSizeCheckboxTemplate" type="text/x-mustache-template">
+                                        {{ #size  }}
+                                            {{ #products }}
+                                                <li>
+                                                    <input type="checkbox" id="{{ size }}" name="sizeCheckboxes" data-type="{{ dataType }}" data-gender="{{ dataGender }}" data-size="{{ dataSize }}"/>
+                                                    <label for="{{ size }}" class="input-label">{{ size }}</label>
+                                                </li>
+                                            {{ /products }}
+                                        {{ /size }}
+                                    </script>
                                 </ul>
                             </li>
                             <li class="py-2">
-                                <label class="input-label" for="mobileGenderList">Gender:</label>
-                                <ul id="mobileGenderList">
-                                    <li>
-                                        <input type="checkbox" id="mobileGenderMens" name="mobileGenderCheckboxes" >
-                                        <label for="mobileGenderMens" class="input-label">Men's</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="mobileGenderWomen" name="mobileGenderCheckboxes" checked>
-                                        <label for="mobileGenderWomen" class="input-label">Women's</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="mobileGenderUnisex" name="mobileGenderCheckboxes" >
-                                        <label for="mobileGenderUnisex" class="input-label">Unisex</label>
-                                    </li>
+                                <label class="input-label" for="MobileGenderCheckboxes">Gender:</label>
+                                <ul id="MobileGenderCheckboxes">
+                                    <script id="mobileGenderCheckboxTemplate" type="text/x-mustache-template">
+                                        {{ #gender  }}
+                                            {{ #products }}
+                                                    <li>
+                                                        <input type="checkbox" id="{{ gender }}" name="genderCheckboxes" data-type="{{ dataType }}" data-gender="{{ dataGender }}" data-size="{{ dataSize }}"/>
+                                                        <label for="{{ gender }}" class="input-label">{{ gender }}</label>
+                                                    </li>
+                                                {{ /products }}
+                                        {{ /gender }}
+                                    </script>
                                 </ul>
                             </li>
                             <li class="py-2">
-                                <label class="input-label" for="mobileTypeList">Type:</label>
-                                <ul id="mobileTypeList">
-                                    <li>
-                                        <input type="checkbox" id="mobileTypeTshirts" name="mobileTypeCheckboxes" checked>
-                                        <label for="mobileTypeTshirts" class="input-label">T-shirts</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="mobileTypeTanks" name="mobileTypeCheckboxes" checked>
-                                        <label for="mobileTypeTanks" class="input-label">Tank Tops</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="mobileTypeHatsMobile" name="mobileTypeCheckboxes" checked>
-                                        <label for="mobileTypeHatsMobile" class="input-label">Hats</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="mobileTypeSkateboards" name="mobileTypeCheckboxes" checked>
-                                        <label for="mobileTypeSkateboards" class="input-label">Skateboards</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="mobileTypeStickers" name="mobileTypeCheckboxes" checked>
-                                        <label for="mobileTypeStickers" class="input-label">Stickers</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="mobileTypeBags" name="mobileTypeCheckboxes" checked>
-                                        <label for="mobileTypeBags" class="input-label">Bags</label>
-                                    </li>
+                                <label class="input-label" for="MobileTypeCheckboxes">Type:</label>
+                                <ul id="MobileTypeCheckboxes">
+                                    <script id="typeCheckboxTemplate" type="text/x-mustache-template">
+                                        {{ #type  }}
+                                            {{ #products }}
+                                                    <li>
+                                                        <input type="checkbox" id="{{ type }}" name="typeCheckboxes" data-type="{{ dataType }}" data-gender="{{ dataGender }}" data-size="{{ dataSize }}"/>
+                                                        <label for="{{ type }}" class="input-label">{{ type }}</label>
+                                                    </li>
+                                                {{ /products }}
+                                        {{ /type }}
+                                    </script>
                                 </ul>
                             </li>
                         </ul>
@@ -149,7 +124,7 @@
                 <div class="d-none d-lg-flex col-3 mt-lg-4">
                     <ul class=" bdr-1-r bdr-tertiary pe-4">
                         <li class="py-2">
-                            <label class="input-label" for="sizeList">Size:</label>
+                            <label class="input-label" for="SizeCheckboxes">Size:</label>
                             <ul id="SizeCheckboxes">
                                 <script id="sizeCheckboxTemplate" type="text/x-mustache-template">
                                     {{ #size  }}
@@ -164,9 +139,9 @@
                             </ul>
                         </li>
                         <li class="py-2">
-                            <label class="input-label" for="genderList">Gender:</label>
-                            <ul id="GenderCheckboxes">
-                                <script id="genderCheckboxTemplate" type="text/x-mustache-template">
+                            <label class="input-label" for="MobileGenderCheckboxes">Gender:</label>
+                            <ul id="MobileGenderCheckboxes">
+                                <script id="mobileGenderCheckboxTemplate" type="text/x-mustache-template">
                                     {{ #gender  }}
                                         {{ #products }}
                                                 <li>
@@ -179,7 +154,7 @@
                             </ul>
                         </li>
                         <li class="py-2">
-                            <label class="input-label" for="typeList">Type:</label>
+                            <label class="input-label" for="TypeCheckboxes">Type:</label>
                             <ul id="TypeCheckboxes">
                                 <script id="typeCheckboxTemplate" type="text/x-mustache-template">
                                     {{ #type  }}

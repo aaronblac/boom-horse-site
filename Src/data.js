@@ -75,11 +75,11 @@ const products = [
 ];
 
 //possibly use in future
-const size = ["X-Small", "Small", "Medium", "Large", "X-large", "XX-Large"];
+const size = [{size: "X-Small"}, {size: "Small"}, {size: "Medium"}, {size: "Large"}, {size: "X-large"}, {size: "XX-Large"}];
 
-const gender = ["Men's", "Women's", "Unisex"];
+const gender = [{gender: "Men's"}, {gender: "Women's"}, {gender: "Unisex"}];
 
-const type = ["Long Sleeve", "T-shirts", "Tank Tops", "Hats", "Skateboards", "Stickers", "Mugs"];
+const type = [{type: "Long Sleeve"}, {type: "T-shirts"}, {type: "Tank Tops"}, {type: "Hats"}, {type: "Skateboards"}, {type: "Stickers"}, {type: "Mugs"}];
 
 
 export default {products, size, gender, type};

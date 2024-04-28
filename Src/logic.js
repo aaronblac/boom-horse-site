@@ -1,30 +1,27 @@
 import data from "./data.js";
 
 $(function() {
-    // itemCard
-    const itemCardTemplate = $("#itemCardTemplate").html();
-    Mustache.parse(itemCardTemplate);
-    const itemCardRendered = Mustache.render(itemCardTemplate, { itemCard: data.products });
-    $("#FeaturedItems").html(itemCardRendered);
+    const renderTemplate = (templateID, data, targetID) => {
+        const template = $(templateID).html();
+        Mustache.parse(template);
+        const rendered = Mustache.render(template, data);
+        $(targetID).html(rendered);
+    }
 
-    // sizes
-    const sizeCheckboxTemplate = $("#sizeCheckboxTemplate").html();
-    Mustache.parse(sizeCheckboxTemplate);
-    const sizeCheckboxRendered = Mustache.render(sizeCheckboxTemplate, { size: data.size, products: data.products });
-    $("#SizeCheckboxes").html(sizeCheckboxRendered);
+    // Render itemCard
+    renderTemplate("#itemCardTemplate", { itemCard: data.products }, "#FeaturedItems");
 
-    // gender
-    const genderTemplate = $("#genderCheckboxTemplate").html();
-    Mustache.parse(genderTemplate);
-    const genderRendered = Mustache.render(genderTemplate, { gender: data.gender, products: data.products });
-    $("#GenderCheckboxes").html(genderRendered);
+    // Render Desktop Checkboxes
+    renderTemplate("#sizeCheckboxTemplate", { size: data.size, products: data.products }, "#SizeCheckboxes");
+    renderTemplate("#genderCheckboxTemplate", { gender: data.gender, products: data.products }, "#GenderCheckboxes");
+    renderTemplate("#typeCheckboxTemplate", { type: data.type, products: data.products }, "#TypeCheckboxes");
 
-    // type
-    const typeCheckboxTemplate = $("#typeCheckboxTemplate").html();
-    Mustache.parse(typeCheckboxTemplate);
-    const typeCheckboxRendered = Mustache.render(typeCheckboxTemplate, { type: data.type, products: data.products });
-    $("#TypeCheckboxes").html(typeCheckboxRendered);
+    // Render Mobile Checkboxes
+    renderTemplate("#mobileSizeCheckboxTemplate", { size: data.size, products: data.products }, "#MobileSizeCheckboxes");
+    renderTemplate("#mobileGenderCheckboxTemplate", { gender: data.gender, products: data.products }, "#MobileGenderCheckboxes");
+    renderTemplate("#mobileTypeCheckboxTemplate", { type: data.type, products: data.products }, "#MobileTypeCheckboxes");
     
+    //Checkbox filter logic
     $(document).on('change','input[type=checkbox', () => {
         filterItems();
     })
@@ -49,4 +46,18 @@ $(function() {
             showItem ? item.show() : item.hide();
         })
     }
+
+    //Mobile Dropdown logic
+    // JavaScript to show/hide the backdrop when the dropdown is toggled
+    // document.querySelectorAll('.dropdown-toggle').forEach(function (dropdownToggle) {
+    //     dropdownToggle.addEventListener('click', function () {
+    //         var dropdownMenu = this.parentElement.querySelector('.dropdown-menu');
+    //         if (dropdownMenu.classList.contains('show')) {
+    //             dropdownMenu.classList.remove('show');
+    //         } else {
+    //             dropdownMenu.classList.add('show');
+    //         }
+    //     });
+    // });
+
 });
