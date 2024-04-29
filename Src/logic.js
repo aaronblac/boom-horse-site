@@ -22,7 +22,7 @@ $(function() {
     renderTemplate("#mobileTypeCheckboxTemplate", { type: data.type, products: data.products }, "#MobileTypeCheckboxes");
 
     //View item template
-    const viTemplate = $('container--view-item').html();
+    const viTemplate = $('.container--view-item').html();
     const viRendered = Mustache.render(template, data.products);
     viTemplate = viRendered;
     
