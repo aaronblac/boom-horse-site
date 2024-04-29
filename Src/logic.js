@@ -10,21 +10,16 @@ $(function() {
 
     // Render itemCard
     renderTemplate("#itemCardTemplate", { itemCard: data.products }, "#FeaturedItems");
-    const processData = {
-        ...data,
-        sizeList: data.size.map(size => size.replace(' ', '-')),
-        genderList: data.gender.map(gender => gender.replace(' ', '-')),
-        typeList: data.type.map(type => type.replace(' ', '-'))
-    }
+    
     // Render Desktop Checkboxes
-    renderTemplate("#sizeCheckboxTemplate", { size: processData.sizeList, products: data.products }, "#SizeCheckboxes");
-    renderTemplate("#genderCheckboxTemplate", { gender: processData.genderList, products: data.products }, "#GenderCheckboxes");
-    renderTemplate("#typeCheckboxTemplate", { type: processData.typeList, products: data.products }, "#TypeCheckboxes");
+    renderTemplate("#sizeCheckboxTemplate", { size: data.size, products: data.products }, "#SizeCheckboxes");
+    renderTemplate("#genderCheckboxTemplate", { gender: data.gender, products: data.products }, "#GenderCheckboxes");
+    renderTemplate("#typeCheckboxTemplate", { type: data.type, products: data.products }, "#TypeCheckboxes");
 
     // Render Mobile Checkboxes
-    renderTemplate("#mobileSizeCheckboxTemplate", { size: processData.sizeList, products: data.products }, "#MobileSizeCheckboxes");
-    renderTemplate("#mobileGenderCheckboxTemplate", { gender: processData.genderList, products: data.products }, "#MobileGenderCheckboxes");
-    renderTemplate("#mobileTypeCheckboxTemplate", { type: processData.typeList, products: data.products }, "#MobileTypeCheckboxes");
+    renderTemplate("#mobileSizeCheckboxTemplate", { size: data.size, products: data.products }, "#MobileSizeCheckboxes");
+    renderTemplate("#mobileGenderCheckboxTemplate", { gender: data.gender, products: data.products }, "#MobileGenderCheckboxes");
+    renderTemplate("#mobileTypeCheckboxTemplate", { type: data.type, products: data.products }, "#MobileTypeCheckboxes");
     
     //Checkbox filter logic
     $('.checkbox-filters').on('change','input[type=checkbox]', () => {
