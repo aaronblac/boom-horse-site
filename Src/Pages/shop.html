@@ -17,10 +17,6 @@
         <script src="../mustache.js"></script>
         <script src="../data.js" type="module"></script>
         <script src="../logic.js" type="module"></script>
-        <script>
-            chekboxFilters = true;
-            itemCard = true;
-        </script>
     </head>
     <body>
         <header class="page-header primary1 sticky-top">
@@ -78,7 +74,7 @@
                                     <script id="mobileSizeCheckboxTemplate" type="text/x-mustache-template">
                                         {{ #size  }}
                                             <li>
-                                                <input type="checkbox" id="{{ size  | replace ' ', '-' | trim }}" name="sizeCheckboxes" data-size="{{ size  | replace ' ', '-' | trim }}"/>
+                                                <input type="checkbox" id="{{ id}}" name="sizeCheckboxes" data-size="{{ id }}"/>
                                                 <label for="{{ id }}" class="input-label">{{ size }}</label>
                                             </li>
                                         {{ /size }}

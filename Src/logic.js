@@ -21,30 +21,44 @@ $(function() {
     renderTemplate("#mobileGenderCheckboxTemplate", { gender: data.gender, products: data.products }, "#MobileGenderCheckboxes");
     renderTemplate("#mobileTypeCheckboxTemplate", { type: data.type, products: data.products }, "#MobileTypeCheckboxes");
     
-    //Checkbox filter logic
-    $('.checkbox-filters').on('change','input[type=checkbox]', () => {
-        console.log("checkbox change" + this.id )
+    // Checkbox filter logic
+    $('.checkbox-filters').on('change', 'input[type=checkbox]', () => {
         filterItems();
-    })
+    });
 
     const filterItems = () => {
-        const checkedAttributes = $('input[type=checkbox]:checked').map(function() {
-            return $(this).data('attribute');
-        }).get();
+        const checkedAttributes = {
+            size: [],
+            gender: [],
+            type: []
+        };
 
+        // Collect checked attributes
+        $('input[type=checkbox]:checked').each(function() {
+            const attribute = $(this).data('attribute');
+            const value = $(this).data('value');
+            if (value !== 'All') {
+                checkedAttributes[attribute].push(value);
+            }
+        });
+
+        // Filter items
         $('.item').each(function() {
             const item = $(this);
             let showItem = true;
 
-            checkedAttributes.forEach(attribute => {
-                const value = item.data(attribute);
-                const checkbox = $(`#checkbox-${attribute}-${value}`);
-                return checkbox.length > 0 && checkbox.prop('checked');
+            // Check if item matches all checked attributes
+            Object.keys(checkedAttributes).forEach(attribute => {
+                const values = checkedAttributes[attribute];
+                if (values.length > 0 && values.indexOf(item.data(attribute)) === -1) {
+                    showItem = false;
+                }
             });
 
             showItem ? item.show() : item.hide();
-        })
-    }
+        });
+    };
+
 
     //View item template
     const viTemplate = $('.container--view-item').html();
