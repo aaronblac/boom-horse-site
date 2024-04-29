@@ -84,7 +84,7 @@
                                             </div>
                                         </div>
                                         <a href="javascript:void(0)">
-                                            <button class="button-tertiary button-small fx-6 remove-item">Remove Item</button>
+                                            <button class="button-tertiary button-small fx-6 remove-item" id="RemoveItem">Remove Item</button>
                                         </a>
                                     </div>
                                 </li>
@@ -117,7 +117,7 @@
                                 <strong>$167.02</strong>
                             </div>
                             <a class="w-100" href="javascript:void(0)">
-                                <button class="w-100 button-secondary checkout mt-5">Checkout</button>
+                                <button class="w-100 button-secondary checkout mt-5" id="Checkout">Checkout</button>
                             </a>
                         </div>
                     </div>
@@ -156,14 +156,14 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="" async defer></script>
         <script>
-            const checkout = document.querySelector('checkout');
+            const checkout = document.getElementById('Checkout');
             const message = document.getElementById('Message');
             checkout.addEventListener("submit", event => {
                 event.preventDefault();
                 message.style.display = "block";
             });
              // Remove Item Logic
-            document.querySelectorAll('.remove-item').forEach(button => {
+            document.getElementById('RemoveItem').forEach(button => {
                 button.addEventListener('click', function() {
                     const listItem = this.closest('li');
                     if (listItem) {
