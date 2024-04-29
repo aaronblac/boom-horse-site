@@ -71,7 +71,7 @@
                         <h2>Boom Horse Long Sleeve</h2>
                         <div>
                             <p>Made with 100% brushed polyester, these long-sleeve tees deliver all the style and comfort one can handle.</p>
-                            <ul>
+                            <ul class="list-style-circle">
                                 <li>Material: 100% polyester</li>
                                 <li>Light fabric (5.16 oz/yd² (175 g/m²))</li>
                                 <li>Assembled in the USA from globally sourced parts</li>
@@ -125,7 +125,7 @@
                         </div>
                         <div class="flex gap-1 w-100 mt-2">
                             <a class="w-50 w-lg-75 " href="javascript:void(0)">
-                                <button type="submit" class="add-to-cart button-primary w-100">Add To Cart</button>
+                                <button class="add-to-cart button-primary w-100">Add To Cart</button>
                             </a>
                             <a class="w-50 w-lg-25 " href="cart.html">
                                 <button class="button-tertiary w-100">View Cart</button>
@@ -191,10 +191,10 @@
         <script src="" async defer></script>
         <script>
             const addToCart = $('.add-to-cart');
-            const message = document.getElementById('Message');
+            const message = $('#Message');
             addToCart.addEventListener("submit", event => {
                 event.preventDefault();
-                this.html("Added To Cart")
+                addToCart.html("Added To Cart")
             });
         </script>
     </body>
