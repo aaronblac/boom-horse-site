@@ -163,7 +163,7 @@
                 message.style.display = "block";
             });
              // Remove Item Logic
-            document.getElementById('RemoveItem').forEach(button => {
+            document.querySelectorAll('.remove-item').forEach(button => {
                 button.addEventListener('click', function() {
                     const listItem = this.closest('li');
                     if (listItem) {
