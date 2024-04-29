@@ -215,7 +215,8 @@
         <script src="" async defer></script>
         <script>
             document.addEventListener("DOMContentLoaded", function(){
-
+                itemCard = true;
+                checkboxFilters = true;
                 // Render itemCard
                 renderTemplate("#itemCardTemplate", { itemCard: data.products }, "#FeaturedItems");
 
