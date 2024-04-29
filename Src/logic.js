@@ -27,6 +27,7 @@ $(function() {
     });
 
     const filterItems = () => {
+        // store for attributes
         const checkedAttributes = {
             size: [],
             gender: [],
