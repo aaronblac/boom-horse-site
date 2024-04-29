@@ -97,7 +97,7 @@
                             <li class="py-2">
                                 <label class="input-label" for="MobileTypeCheckboxes">Type:</label>
                                 <ul id="MobileTypeCheckboxes">
-                                    <script id="typeCheckboxTemplate" type="text/x-mustache-template">
+                                    <script id="mobileTypeCheckboxTemplate" type="text/x-mustache-template">
                                         {{ #type  }}
                                                 <li>
                                                     <input type="checkbox" id="{{ type }}" name="typeCheckboxes" data-type="{{ type }}"/>
@@ -131,9 +131,9 @@
                             </ul>
                         </li>
                         <li class="py-2">
-                            <label class="input-label" for="MobileGenderCheckboxes">Gender:</label>
-                            <ul id="MobileGenderCheckboxes">
-                                <script id="mobileGenderCheckboxTemplate" type="text/x-mustache-template">
+                            <label class="input-label" for="GenderCheckboxes">Gender:</label>
+                            <ul id="GenderCheckboxes">
+                                <script id="genderCheckboxTemplate" type="text/x-mustache-template">
                                     {{ #gender  }}
                                         <li>
                                             <input type="checkbox" id="{{ gender }}" name="genderCheckboxes" data-gender="{{ gender }}"/>
