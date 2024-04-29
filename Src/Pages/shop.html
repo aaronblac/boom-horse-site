@@ -17,6 +17,10 @@
         <script src="../mustache.js"></script>
         <script src="../data.js" type="module"></script>
         <script src="../logic.js" type="module"></script>
+        <script>
+            chekboxFilters = true;
+            itemCard = true;
+        </script>
     </head>
     <body>
         <header class="page-header primary1 sticky-top">
@@ -209,5 +213,47 @@
         <![endif]-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="" async defer></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+
+                // Render itemCard
+                renderTemplate("#itemCardTemplate", { itemCard: data.products }, "#FeaturedItems");
+
+                // Render Desktop Checkboxes
+                renderTemplate("#sizeCheckboxTemplate", { size: data.size, products: data.products }, "#SizeCheckboxes");
+                renderTemplate("#genderCheckboxTemplate", { gender: data.gender, products: data.products }, "#GenderCheckboxes");
+                renderTemplate("#typeCheckboxTemplate", { type: data.type, products: data.products }, "#TypeCheckboxes");
+
+                // Render Mobile Checkboxes
+                renderTemplate("#mobileSizeCheckboxTemplate", { size: data.size, products: data.products }, "#MobileSizeCheckboxes");
+                renderTemplate("#mobileGenderCheckboxTemplate", { gender: data.gender, products: data.products }, "#MobileGenderCheckboxes");
+                renderTemplate("#mobileTypeCheckboxTemplate", { type: data.type, products: data.products }, "#MobileTypeCheckboxes");
+                
+                $(document).on('change','input[type=checkbox', () => {
+                    filterItems();
+                })
+            
+                const filterItems = () => {
+                    const checkedAttributes = $('input[type=checkbox]:checked').map(function() {
+                        return $(this).data('attribute');
+                    }).get();
+            
+                    $('.item').each(function() {
+                        const item = $(this);
+                        let showItem = true;
+            
+                        checkedAttributes.forEach(attribute => {
+                            const value = item.data(attribute);
+                            if(!($(`#checkbox-${attribute}-${value}`).prop('checked'))) {
+                                showItem = false;
+                                return false;
+                            }
+                        });
+            
+                        showItem ? item.show() : item.hide();
+                    })
+                }
+            });
+        </script>
     </body>
 </html>
