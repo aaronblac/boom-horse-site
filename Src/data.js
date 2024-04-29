@@ -52,7 +52,7 @@ const products = [
     },
     {
         id: 4,
-        dataType: "LongSleeve",
+        dataType: "Long-Sleeve",
         dataGender: "Mens",
         dataSize: "All",
         name: "Boom Horse LongSleeve",
@@ -102,7 +102,7 @@ const products = [
     },
     {
         id: 7,
-        dataType: "TankTops",
+        dataType: "Tank-Tops",
         dataGender: "Womens",
         dataSize: "All",
         name: "Boom Horse Tank Top",
