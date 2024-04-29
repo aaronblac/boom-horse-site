@@ -38,6 +38,7 @@ $(function() {
         $('input[type=checkbox]:checked').each(function() {
             const attribute = $(this).data('attribute');
             const value = $(this).data('value');
+            console.log(`attribute: ${attribute}, value: ${value}`)
             if (value !== 'All') {
                 checkedAttributes[attribute].push(value);
             }
