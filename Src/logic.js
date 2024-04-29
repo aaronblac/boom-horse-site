@@ -23,6 +23,7 @@ $(function() {
     
     //Checkbox filter logic
     $('.checkbox-filters').on('change','input[type=checkbox]', () => {
+        console.log("checkbox change" + this.id )
         filterItems();
     })
 
