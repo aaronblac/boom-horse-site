@@ -51,16 +51,6 @@ $(function() {
             showItem ? item.show() : item.hide();
         })
     }
-
-    // Remove Item Logic
-    $('.remove-item').forEach(button => {
-        button.addEventListener('click', function() {
-            const listItem = this.closest('li');
-            if (listItem) {
-                listItem.remove();
-            }
-        });
-    });
     
 
 });
