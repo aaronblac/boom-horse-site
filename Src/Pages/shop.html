@@ -73,12 +73,10 @@
                                 <ul id="MobileSizeCheckboxes">
                                     <script id="mobileSizeCheckboxTemplate" type="text/x-mustache-template">
                                         {{ #size  }}
-                                            {{ #products }}
-                                                <li>
-                                                    <input type="checkbox" id="{{ size }}" name="sizeCheckboxes" data-type="{{ dataType }}" data-gender="{{ dataGender }}" data-size="{{ dataSize }}"/>
-                                                    <label for="{{ size }}" class="input-label">{{ size }}</label>
-                                                </li>
-                                            {{ /products }}
+                                            <li>
+                                                <input type="checkbox" id="{{ size }}" name="sizeCheckboxes" data-size="{{ size }}"/>
+                                                <label for="{{ size }}" class="input-label">{{ size }}</label>
+                                            </li>
                                         {{ /size }}
                                     </script>
                                 </ul>
@@ -88,12 +86,10 @@
                                 <ul id="MobileGenderCheckboxes">
                                     <script id="mobileGenderCheckboxTemplate" type="text/x-mustache-template">
                                         {{ #gender  }}
-                                            {{ #products }}
-                                                    <li>
-                                                        <input type="checkbox" id="{{ gender }}" name="genderCheckboxes" data-type="{{ dataType }}" data-gender="{{ dataGender }}" data-size="{{ dataSize }}"/>
-                                                        <label for="{{ gender }}" class="input-label">{{ gender }}</label>
-                                                    </li>
-                                                {{ /products }}
+                                                <li>
+                                                    <input type="checkbox" id="{{ gender }}" name="genderCheckboxes" data-gender="{{ gender }}" "/>
+                                                    <label for="{{ gender }}" class="input-label">{{ gender }}</label>
+                                                </li>
                                         {{ /gender }}
                                     </script>
                                 </ul>
@@ -103,12 +99,10 @@
                                 <ul id="MobileTypeCheckboxes">
                                     <script id="typeCheckboxTemplate" type="text/x-mustache-template">
                                         {{ #type  }}
-                                            {{ #products }}
-                                                    <li>
-                                                        <input type="checkbox" id="{{ type }}" name="typeCheckboxes" data-type="{{ dataType }}" data-gender="{{ dataGender }}" data-size="{{ dataSize }}"/>
-                                                        <label for="{{ type }}" class="input-label">{{ type }}</label>
-                                                    </li>
-                                                {{ /products }}
+                                                <li>
+                                                    <input type="checkbox" id="{{ type }}" name="typeCheckboxes" data-type="{{ type }}"/>
+                                                    <label for="{{ type }}" class="input-label">{{ type }}</label>
+                                                </li>
                                         {{ /type }}
                                     </script>
                                 </ul>
@@ -128,12 +122,10 @@
                             <ul id="SizeCheckboxes">
                                 <script id="sizeCheckboxTemplate" type="text/x-mustache-template">
                                     {{ #size  }}
-                                        {{ #products }}
-                                            <li>
-                                                <input type="checkbox" id="{{ size }}" name="sizeCheckboxes" data-type="{{ dataType }}" data-gender="{{ dataGender }}" data-size="{{ dataSize }}"/>
-                                                <label for="{{ size }}" class="input-label">{{ size }}</label>
-                                            </li>
-                                        {{ /products }}
+                                        <li>
+                                            <input type="checkbox" id="{{ size }}" name="sizeCheckboxes" data-size="{{ size }}"/>
+                                            <label for="{{ size }}" class="input-label">{{ size }}</label>
+                                        </li>
                                     {{ /size }}
                                 </script>
                             </ul>
@@ -143,12 +135,10 @@
                             <ul id="MobileGenderCheckboxes">
                                 <script id="mobileGenderCheckboxTemplate" type="text/x-mustache-template">
                                     {{ #gender  }}
-                                        {{ #products }}
-                                                <li>
-                                                    <input type="checkbox" id="{{ gender }}" name="genderCheckboxes" data-type="{{ dataType }}" data-gender="{{ dataGender }}" data-size="{{ dataSize }}"/>
-                                                    <label for="{{ gender }}" class="input-label">{{ gender }}</label>
-                                                </li>
-                                            {{ /products }}
+                                        <li>
+                                            <input type="checkbox" id="{{ gender }}" name="genderCheckboxes" data-gender="{{ gender }}"/>
+                                            <label for="{{ gender }}" class="input-label">{{ gender }}</label>
+                                        </li>
                                     {{ /gender }}
                                 </script>
                             </ul>
@@ -158,12 +148,10 @@
                             <ul id="TypeCheckboxes">
                                 <script id="typeCheckboxTemplate" type="text/x-mustache-template">
                                     {{ #type  }}
-                                        {{ #products }}
-                                                <li>
-                                                    <input type="checkbox" id="{{ type }}" name="typeCheckboxes" data-type="{{ dataType }}" data-gender="{{ dataGender }}" data-size="{{ dataSize }}"/>
-                                                    <label for="{{ type }}" class="input-label">{{ type }}</label>
-                                                </li>
-                                            {{ /products }}
+                                        <li>
+                                            <input type="checkbox" id="{{ type }}" name="typeCheckboxes" data-type="{{ type }}"/>
+                                            <label for="{{ type }}" class="input-label">{{ type }}</label>
+                                        </li>
                                     {{ /type }}
                                 </script>
                             </ul>

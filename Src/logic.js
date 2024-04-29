@@ -52,27 +52,15 @@ $(function() {
         })
     }
 
-    // Add event listener to all "Remove Item" buttons
+    // Remove Item Logic
     $('.remove-item').forEach(button => {
         button.addEventListener('click', function() {
-            // Find the parent <li> element and remove it
             const listItem = this.closest('li');
             if (listItem) {
                 listItem.remove();
             }
         });
     });
-    //Mobile Dropdown logic
-    // JavaScript to show/hide the backdrop when the dropdown is toggled
-    // document.querySelectorAll('.dropdown-toggle').forEach(function (dropdownToggle) {
-    //     dropdownToggle.addEventListener('click', function () {
-    //         var dropdownMenu = this.parentElement.querySelector('.dropdown-menu');
-    //         if (dropdownMenu.classList.contains('show')) {
-    //             dropdownMenu.classList.remove('show');
-    //         } else {
-    //             dropdownMenu.classList.add('show');
-    //         }
-    //     });
-    // });
+    
 
 });
