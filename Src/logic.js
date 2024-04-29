@@ -37,10 +37,8 @@ $(function() {
 
             checkedAttributes.forEach(attribute => {
                 const value = item.data(attribute);
-                if(!($(`#checkbox-${attribute}-${value}`).prop('checked'))) {
-                    showItem = false;
-                    return false;
-                }
+                const checkbox = $(`#checkbox-${attribute}-${value}`);
+                return checkbox.length > 0 && checkbox.prop('checked');
             });
 
             showItem ? item.show() : item.hide();
