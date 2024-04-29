@@ -117,11 +117,13 @@
                                 <strong>$167.02</strong>
                             </div>
                             <a class="w-100" href="javascript:void(0)">
-                                <button class="w-100 button-secondary mt-5">Checkout</button>
+                                <button class="w-100 button-secondary checkout mt-5">Checkout</button>
                             </a>
                         </div>
                     </div>
-                    
+                    <div id="Message" class="flex justify-center py-4" style="display:none;">
+                        <h3 class="c-p2">Checkout Complete!</h3>
+                    </div>
                 </div>
             </div>
         </main>
@@ -154,11 +156,11 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="" async defer></script>
         <script>
-            const contactForm = document.getElementById('ContactForm');
-            const messageSent = document.getElementById('MessageSent');
-            contactForm.addEventListener("submit", event => {
+            const checkout = $('.checkout');
+            const message = document.getElementById('Message');
+            checkout.addEventListener("submit", event => {
                 event.preventDefault();
-                messageSent.style.display = "block"
+                message.style.display = "block"
             });
         </script>
     </body>

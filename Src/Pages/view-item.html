@@ -65,13 +65,17 @@
             <div class="row mt-1 w-100">
                 <div class="col-xl-10 flex flex-column flex-md-row gap-3 container--view-item">
                     <div class="container--item-thumb view-item-thumb w-md-50 w-100 h-100">
-                        <img src="" alt="Item Image">
+                        <img src="/images/BoomHorseLongSleeve.jpeg" alt="Item Image">
                     </div>
                     <div class="flex flex-column gap-2 w-100 w-md-50">
-                        <h2>{{ name }}</h2>
+                        <h2>Boom Horse Long Sleeve</h2>
                         <div>
-                            <p>{{ descriptionP }}</p>
-                            <div>{{ descriptionL }}</div>
+                            <p>Made with 100% brushed polyester, these long-sleeve tees deliver all the style and comfort one can handle.</p>
+                            <ul>
+                                <li>Material: 100% polyester</li>
+                                <li>Light fabric (5.16 oz/yd² (175 g/m²))</li>
+                                <li>Assembled in the USA from globally sourced parts</li>
+                            </ul>`
                         </div>
                         <div class="flex flex-column">
                             <label class="input-label">Size:</label>
@@ -102,7 +106,7 @@
                             <label class="input-label">Color:</label>
                             <ul class="flex gap-2 ps-0" aria-label="Color List">
                                 <li>
-                                    <input type="radio" id="Black" name="colorInputs" >
+                                    <input type="radio" id="Black" name="colorInputs" checked>
                                     <label for="Black" class="input-label">Black</label>
                                 </li>
                                 <li>
@@ -114,14 +118,14 @@
                                     <label for="Blue" class="input-label">Blue</label>
                                 </li>
                                 <li>
-                                    <input type="radio" id="White" name="colorInputs" checked>
+                                    <input type="radio" id="White" name="colorInputs" >
                                     <label for="White" class="input-label">White</label>
                                 </li>
                             </ul>
                         </div>
                         <div class="flex gap-1 w-100 mt-2">
                             <a class="w-50 w-lg-75 " href="javascript:void(0)">
-                                <button class="add-to-cart button-primary w-100">Add To Cart</button>
+                                <button type="submit" class="add-to-cart button-primary w-100">Add To Cart</button>
                             </a>
                             <a class="w-50 w-lg-25 " href="cart.html">
                                 <button class="button-tertiary w-100">View Cart</button>
@@ -185,5 +189,13 @@
         <![endif]-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="" async defer></script>
+        <script>
+            const addToCart = $('.add-to-cart');
+            const message = document.getElementById('Message');
+            addToCart.addEventListener("submit", event => {
+                event.preventDefault();
+                this.html("Added To Cart")
+            });
+        </script>
     </body>
 </html>
