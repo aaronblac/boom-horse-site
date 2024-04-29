@@ -44,21 +44,31 @@ $(function() {
             }
         });
 
-        // Filter items
+        /// Filter items
         $('.item').each(function() {
             const item = $(this);
-            let showItem = true;
-
-            // Check if item matches all checked attributes
+            let hideItem = false; // Use a flag to track hiding
+        
+            // Check if item matches any checked attributes
             Object.keys(checkedAttributes).forEach(attribute => {
-                const values = checkedAttributes[attribute];
-                if (values.length > 0 && values.indexOf(item.data(attribute)) === -1) {
-                    showItem = false;
-                }
+            const values = checkedAttributes[attribute];
+            const itemValue = item.data(attribute);
+        
+            // If "All" is selected, skip hiding for this attribute
+            if (values.includes('All')) {
+                return;
+            }
+        
+            // Check if item attribute value doesn't match any checked value (excluding "All")
+            if (values.length > 0 && !values.includes(itemValue)) {
+                hideItem = true; // Set flag to hide
+            }
             });
-
-            showItem ? item.show() : item.hide();
+        
+            // Show/Hide based on the hideItem flag
+            hideItem ? item.hide() : item.show();
         });
+  
     };
 
 
