@@ -78,8 +78,8 @@
                                     <script id="mobileSizeCheckboxTemplate" type="text/x-mustache-template">
                                         {{ #size  }}
                                             <li>
-                                                <input type="checkbox" id="{{ size }}" name="sizeCheckboxes" data-size="{{ size }}"/>
-                                                <label for="{{ size }}" class="input-label">{{ size }}</label>
+                                                <input type="checkbox" id="{{ size  | replace ' ', '' }}" name="sizeCheckboxes" data-size="{{ size  | replace ' ', '' }}"/>
+                                                <label for="{{ size | replace ' ', '' }}" class="input-label">{{ size }}</label>
                                             </li>
                                         {{ /size }}
                                     </script>
@@ -91,8 +91,8 @@
                                     <script id="mobileGenderCheckboxTemplate" type="text/x-mustache-template">
                                         {{ #gender  }}
                                                 <li>
-                                                    <input type="checkbox" id="{{ gender }}" name="genderCheckboxes" data-gender="{{ gender }}" "/>
-                                                    <label for="{{ gender }}" class="input-label">{{ gender }}</label>
+                                                    <input type="checkbox" id="{{ gender | replace ' ', '' }}" name="genderCheckboxes" data-gender="{{ gender | replace ' ', '' }}" "/>
+                                                    <label for="{{ gender | replace ' ', '' }}" class="input-label">{{ gender }}</label>
                                                 </li>
                                         {{ /gender }}
                                     </script>
@@ -104,8 +104,8 @@
                                     <script id="mobileTypeCheckboxTemplate" type="text/x-mustache-template">
                                         {{ #type  }}
                                                 <li>
-                                                    <input type="checkbox" id="{{ type }}" name="typeCheckboxes" data-type="{{ type }}"/>
-                                                    <label for="{{ type }}" class="input-label">{{ type }}</label>
+                                                    <input type="checkbox" id="{{ type | replace ' ', '' }}" name="typeCheckboxes" data-type="{{ type | replace ' ', '' }}"/>
+                                                    <label for="{{ type | replace ' ', '' }}" class="input-label">{{ type }}</label>
                                                 </li>
                                         {{ /type }}
                                     </script>
@@ -127,8 +127,8 @@
                                 <script id="sizeCheckboxTemplate" type="text/x-mustache-template">
                                     {{ #size  }}
                                         <li>
-                                            <input type="checkbox" id="{{ size }}" name="sizeCheckboxes" data-size="{{ size }}"/>
-                                            <label for="{{ size }}" class="input-label">{{ size }}</label>
+                                            <input type="checkbox" id="{{ size | replace ' ', '' }}" name="sizeCheckboxes" data-size="{{ size | replace ' ', '' }}"/>
+                                            <label for="{{ size | replace ' ', '' }}" class="input-label">{{ size }}</label>
                                         </li>
                                     {{ /size }}
                                 </script>
@@ -140,8 +140,8 @@
                                 <script id="genderCheckboxTemplate" type="text/x-mustache-template">
                                     {{ #gender  }}
                                         <li>
-                                            <input type="checkbox" id="{{ gender }}" name="genderCheckboxes" data-gender="{{ gender }}"/>
-                                            <label for="{{ gender }}" class="input-label">{{ gender }}</label>
+                                            <input type="checkbox" id="{{ gender | replace ' ', '' }}" name="genderCheckboxes" data-gender="{{ gender | replace ' ', '' }}"/>
+                                            <label for="{{ gender | replace ' ', '' }}" class="input-label">{{ gender }}</label>
                                         </li>
                                     {{ /gender }}
                                 </script>
@@ -153,8 +153,8 @@
                                 <script id="typeCheckboxTemplate" type="text/x-mustache-template">
                                     {{ #type  }}
                                         <li>
-                                            <input type="checkbox" id="{{ type }}" name="typeCheckboxes" data-type="{{ type }}"/>
-                                            <label for="{{ type }}" class="input-label">{{ type }}</label>
+                                            <input type="checkbox" id="{{ type | replace ' ', '' }}" name="typeCheckboxes" data-type="{{ type | replace ' ', '' }}"/>
+                                            <label for="{{ type | replace ' ', '' }}" class="input-label">{{ type }}</label>
                                         </li>
                                     {{ /type }}
                                 </script>
