@@ -22,7 +22,7 @@ $(function() {
     renderTemplate("#mobileTypeCheckboxTemplate", { type: data.type, products: data.products }, "#MobileTypeCheckboxes");
     
     //Checkbox filter logic
-    $(document).on('change','input[type=checkbox', () => {
+    $(document).on('change','input[type=checkbox]', () => {
         filterItems();
     })
 
