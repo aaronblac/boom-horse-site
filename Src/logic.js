@@ -20,6 +20,11 @@ $(function() {
     renderTemplate("#mobileSizeCheckboxTemplate", { size: data.size, products: data.products }, "#MobileSizeCheckboxes");
     renderTemplate("#mobileGenderCheckboxTemplate", { gender: data.gender, products: data.products }, "#MobileGenderCheckboxes");
     renderTemplate("#mobileTypeCheckboxTemplate", { type: data.type, products: data.products }, "#MobileTypeCheckboxes");
+
+    //View item template
+    const viTemplate = $('container--view-item').html();
+    const viRendered = Mustache.render(template, data.products);
+    viTemplate = viRendered;
     
     //Checkbox filter logic
     $(document).on('change','input[type=checkbox', () => {
@@ -46,6 +51,17 @@ $(function() {
             showItem ? item.show() : item.hide();
         })
     }
+
+    // Add event listener to all "Remove Item" buttons
+    $('.remove-item').forEach(button => {
+        button.addEventListener('click', function() {
+            // Find the parent <li> element and remove it
+            const listItem = this.closest('li');
+            if (listItem) {
+                listItem.remove();
+            }
+        });
+    });
     //Mobile Dropdown logic
     // JavaScript to show/hide the backdrop when the dropdown is toggled
     // document.querySelectorAll('.dropdown-toggle').forEach(function (dropdownToggle) {

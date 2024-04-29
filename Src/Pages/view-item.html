@@ -63,13 +63,16 @@
         <main>
             <a class="breadcrumb-link" href="shop.html">Continue Shopping</a>
             <div class="row mt-1 w-100">
-                <div class="col-xl-10 flex flex-column flex-md-row gap-3">
+                <div class="col-xl-10 flex flex-column flex-md-row gap-3 container--view-item">
                     <div class="container--item-thumb view-item-thumb w-md-50 w-100 h-100">
                         <img src="" alt="Item Image">
                     </div>
                     <div class="flex flex-column gap-2 w-100 w-md-50">
-                        <h2>Item Name</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h2>{{ name }}</h2>
+                        <div>
+                            <p>{{ descriptionP }}</p>
+                            <div>{{ descriptionL }}</div>
+                        </div>
                         <div class="flex flex-column">
                             <label class="input-label">Size:</label>
                             <ul class="flex gap-2 ps-0" aria-label="Size List">
@@ -118,7 +121,7 @@
                         </div>
                         <div class="flex gap-1 w-100 mt-2">
                             <a class="w-50 w-lg-75 " href="javascript:void(0)">
-                                <button class="button-primary w-100">Add To Cart</button>
+                                <button class="add-to-cart button-primary w-100">Add To Cart</button>
                             </a>
                             <a class="w-50 w-lg-25 " href="cart.html">
                                 <button class="button-tertiary w-100">View Cart</button>

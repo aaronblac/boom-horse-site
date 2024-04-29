@@ -7,7 +7,16 @@ const products = [
         dataSize: "All",
         name: "Boom Horse T-shirt",
         image: "/images/BoomHorseTshirt.jpeg",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        price: "$28.32",
+        descriptionP: `<p>The unisex soft-style t-shirt puts a new spin on casual comfort. Made from very soft materials, this tee is 100% cotton for solid colors. Heather colors and sports grey include polyester. The shoulders have twill tape for improved durability. There are no side seams. The collar is made with ribbed knitting to prevent curling damage.</p>`,
+        descriptionL:`              
+                    <ul>
+                        <li>Made with 100% ring-spun cotton, a lightweight fabric (4.5 oz/yd² (153 g/m²)), this unisex t-shirt feels like a bliss to wear all year round.</li>
+                        <li>The classic fit with the crew neckline deliver a clean, versatile style that can match any occasion, whether it's formal or semi-formal.</li>
+                        <li>All shirts feature a pearlized, tear-away label for total wearing comfort.</li>
+                        <li>Made using ethically grown and harvested US cotton. Gildan is also a proud member of the US Cotton Trust Protocol ensuring ethical and sustainable means of production. This blank tee is certified by Oeko-Tex for safety and quality assurance.</li>
+                        <li>Fabric blends: Heather colors - 35% ring-spun cotton, 65% polyester; Sport Grey and Antique colors - 90% cotton, 10% polyester, Graphite Heather - 50% ring-spun cotton, 50% polyester</li>
+                      </ul>`
     },
     {
         id: 2,
@@ -16,7 +25,14 @@ const products = [
         dataSize: "All",
         name: "Boom Horse Hat",
         image: "/images/BoomHorseHat.jpeg",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        price: "$19.99",
+        descriptionP: `<p>Made with 100% cotton twill for high-end comfort and durability, these custom distressed hats bring all the style and practicality one needs in daily life. The low profile along with the d-ring closure on a self-fabric hideaway strap ensures both proper protection from the sun and that perfect, adjustable fit.</p>`,
+        descriptionL:`            
+                    <ul>
+                        <li>100% cotton twill</li>
+                        <li>Sewn-in label</li>
+                        <li>Closure: self-fabric hideaway strap with metal D-ring slider</li>
+                    </ul>`
     },
     {
         id: 3,
@@ -25,25 +41,47 @@ const products = [
         dataSize: "None",
         name: "Boom Horse Logo Sticker",
         image: "/images/BoomHorseSticker.jpeg",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        price: "$19.99",
+        descriptionP: `<p>These die-cut transparent stickers come in 5x sizes and are perfect for both indoor and outdoor use. Thanks to their water-resistant vinyl construction, they can maintain their looks & colors, even against the elements. Great for customizing laptops, cars, motorcycles & so much more.</p>`,
+        descriptionL:`            
+                    <ul>
+                        <li>Material: water-resistant vinyl</li>
+                        <li>Suitable for indoor and outdoor use</li>
+                        <li>Assembled in the USA from globally sourced parts</li>
+                    </ul>`
     },
     {
         id: 4,
         dataType: "LongSleeve",
-        dataGender: "All",
+        dataGender: "Mens",
         dataSize: "All",
-        name: "Boom Horse Hoodie",
-        image: "/images/BoomHorseHoodie.jpeg",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        name: "Boom Horse LongSleeve",
+        image: "/images/BoomHorseLongSleeve.jpeg",
+        price: "$19.99",
+        descriptionP: `<p>Made with 100% brushed polyester, these long-sleeve tees deliver all the style and comfort one can handle. </p>`,
+        descriptionL:`            
+                    <ul>
+                        <li>Material: 100% polyester</li>
+                        <li>Light fabric (5.16 oz/yd² (175 g/m²))</li>
+                        <li>Assembled in the USA from globally sourced parts</li>
+                    </ul>`
     },
     {
         id: 5,
         dataType: "LongSleeve",
         dataGender: "All",
         dataSize: "All",
-        name: "Boom Horse Long Sleeve",
-        image: "/images/BoomHorseLongSleeve.jpeg",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        name: "Boom Horse Hoodie",
+        image: "/images/BoomHorseHoodie.jpeg",
+        price: "$19.99",
+        descriptionP: `<p>This unisex heavy blend hooded sweatshirt is relaxation itself. Made with a thick blend of cotton and polyester, it feels plush, soft and warm, a perfect choice for any cold day. In the front, the spacious kangaroo pocket adds daily practicality while the hood's drawstring is the same color as the base sweater for extra style points.</p>`,
+        descriptionL:`            
+                    <ul>
+                        <li>Made with a medium-heavy fabric (8.0 oz/yd² (271 g/m²)) that consists of 50% cotton and 50% polyester for that cozy feel and warmth you need in a hoodie.</li>
+                        <li>The classic fit along with the pouch pocket and the tear-away label make for a highly comfortable, scratch-free wearing experience</li>
+                        <li>The color-matched drawcord and the double-lined hood add a stylish flair and durability that tie everything together.</li>
+                        <li>Made using 100% ethically grown US cotton. Gildan is also a proud member of the US Cotton Trust Protocol ensuring ethical and sustainable means of production.</li>
+                    </ul>`
     },
     {
         id: 6,
@@ -52,7 +90,15 @@ const products = [
         dataSize: "None",
         name: "Boom Horse Mug",
         image: "/images/BoomHorseMugFront.png",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        price: "$19.99",
+        descriptionP: `<p>Warm your soul with a nice cuppa out of this Boom Horse ceramic mug. It’s BPA and lead-free, microwave and dishwasher-safe, and made of black durable ceramic.</p>`,
+        descriptionL:`            
+                    <ul>
+                        <li>Material: 100% ceramic with a glossy finish</li>
+                        <li>C-shaped easy-grip handle</li>
+                        <li>Microwave and dishwasher safe</li>
+                        <li>Lead and BPA-free</li>
+                    </ul>`
     },
     {
         id: 7,
@@ -61,7 +107,14 @@ const products = [
         dataSize: "All",
         name: "Boom Horse Tank Top",
         image: "/images/BoomHorseTankTopGray.jpeg",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        price: "$19.99",
+        descriptionP: `<p>A high-quality slim fit tank-top will turn heads. Bystanders won't be disappointed - the racerback cut looks good on any woman's shoulders.</p>`,
+        descriptionL:`            
+                    <ul>
+                        <li>Made with extra light fabric (60% combed, ring-spun cotton and 40% polyester: 4 oz/yd² (135 g/m²)) this racerback tank is supremely lightweight and an excellent choice for the active lifestyle.</li>
+                        <li>The classic fit along make the tank a comfortable choice under high performance while the scooped neckline brings a sporty touch to the whole outfit.</li>
+                        <li>For a completely scratch-free experience, all tanks come with a tear-away label for unhindered performance on a daily basis.</li>
+                    </ul>`
     },
     {
         id: 8,
@@ -70,7 +123,12 @@ const products = [
         dataSize: "None",
         name: "Boom Horse Skateboard",
         image: "/images/BoomHorseSkateboard.png",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        price: "$19.99",
+        descriptionP: `<p>Pulling from a number of different classic shapes, the old school deck embodies all the feel and attitude of the past. Solid and wide it will support even the biggest 40-plus skaters.</p>`,
+        descriptionL:`            
+                    <ul>
+                        <li>Skateboards are made from 100% Canadian Maple, the best wood for making skateboards, period. We don't cut any corners. This is the best there is.</li>
+                    </ul>`
     }
 ];
 
