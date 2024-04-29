@@ -55,7 +55,7 @@ $(function() {
             const itemValue = item.data(attribute);
         
             // If "All" is selected, skip hiding for this attribute
-            if (values.includes('All')) {
+            if (itemValue === 'All' || values.includes('All')) {
                 return;
             }
         

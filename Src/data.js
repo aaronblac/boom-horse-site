@@ -2,7 +2,7 @@
 const products = [
     {
         id: 1,
-        dataType: "T-shirts",
+        dataType: "Tshirts",
         dataGender: "All",
         dataSize: "All",
         name: "Boom Horse T-shirt",
@@ -52,7 +52,7 @@ const products = [
     },
     {
         id: 4,
-        dataType: "Long-Sleeve",
+        dataType: "LongSleeve",
         dataGender: "Mens",
         dataSize: "All",
         name: "Boom Horse LongSleeve",
@@ -102,7 +102,7 @@ const products = [
     },
     {
         id: 7,
-        dataType: "Tank-Tops",
+        dataType: "TankTops",
         dataGender: "Womens",
         dataSize: "All",
         name: "Boom Horse Tank Top",
