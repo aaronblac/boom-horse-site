@@ -136,7 +136,7 @@
                                 <script id="genderCheckboxTemplate" type="text/x-mustache-template">
                                     {{ #gender  }}
                                         <li>
-                                            <input type="checkbox" id="{{ id }}" name="genderCheckboxes" data-gender="{{ id }}" data-attribute="size" data-value="{{ id }}"/>
+                                            <input type="checkbox" id="{{ id }}" name="genderCheckboxes" data-gender="{{ id }}" data-attribute="gender" data-value="{{ id }}"/>
                                             <label for="{{ id }}" class="input-label">{{ gender }}</label>
                                         </li>
                                     {{ /gender }}
@@ -149,7 +149,7 @@
                                 <script id="typeCheckboxTemplate" type="text/x-mustache-template">
                                     {{ #type  }}
                                         <li>
-                                            <input type="checkbox" id="{{ id }}" name="typeCheckboxes" data-type="{{ id }}" data-attribute="size" data-value="{{ id }}"/>
+                                            <input type="checkbox" id="{{ id }}" name="typeCheckboxes" data-type="{{ id }}" data-attribute="type" data-value="{{ id }}"/>
                                             <label for="{{ id }}" class="input-label">{{ type }}</label>
                                         </li>
                                     {{ /type }}
