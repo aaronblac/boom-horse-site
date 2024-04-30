@@ -78,7 +78,7 @@ $(function() {
     };
 
     // Clear items
-    $('.clear-items').on('click', e => {
+    $('.clear-filter').on('click', e => {
         e.preventDefault();
         checkedAttributes = {};
 
