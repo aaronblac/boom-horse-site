@@ -62,12 +62,12 @@
         </header>
         <main>
             <a class="breadcrumb-link" href="shop.html">Continue Shopping</a>
-            <div class="row mt-1 w-100">
+            <div class="row mt-1 w-100 g-0">
                 <div class="col-xl-10 flex flex-column flex-md-row gap-3 container--view-item">
                     <div class="container--item-thumb view-item-thumb w-md-50 w-100 h-100">
                         <img src="/images/BoomHorseLongSleeve.jpeg" alt="Item Image">
                     </div>
-                    <div class="flex flex-column gap-2 w-100 w-md-50">
+                    <div class="flex flex-column px-md-3 gap-2 w-100 w-md-50">
                         <h2>BH Long Sleeve</h2>
                         <div>
                             <p>Made with 100% brushed polyester, these long-sleeve tees deliver all the style and comfort one can handle.</p>
@@ -195,7 +195,7 @@
                 const addToCart = document.querySelector('.add-to-cart');
                 addToCart.addEventListener("click", event => {
                     event.preventDefault();
-                    addToCart.innerHTML = "Added To Cart";
+                    addToCart.innerHTML = "In Cart";
                 });
             })
         </script>
