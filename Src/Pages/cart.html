@@ -165,16 +165,18 @@
                 });
                 
                  // Remove Item Logic
-                document.querySelectorAll('.remove-item').forEach(button => {
-                    button.addEventListener('click', function() {
+                const cartList = document.querySelector('.cart-list');
+
+                cartList.addEventListener('click', function(event) {
+                    if(event.target.matches('.remove-item') || event.target.closest('.remove-item')){
                         const listItem = this.closest('li');
                         if (listItem) {
                             listItem.remove();
                             console.log("item removed")
                         }
-                    });
+                    }
                 });
-            })
+            });
         </script>
     </body>
 </html>
