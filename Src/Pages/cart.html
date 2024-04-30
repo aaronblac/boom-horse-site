@@ -161,7 +161,7 @@
                 const message = document.getElementById('Message');
                 checkout.addEventListener("click", event => {
                     event.preventDefault();
-                    message.style.display = "block";
+                    message.style.display = "flex";
                 });
                 
                  // Remove Item Logic
@@ -171,6 +171,7 @@
                     if(event.target.matches('.remove-item') || event.target.closest('.remove-item')){
                         console.log(event.target)
                         const listItem = this.closest('li');
+                        console.log(listItem);
                         if (listItem) {
                             listItem.remove();
                             console.log("item removed")
