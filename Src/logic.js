@@ -25,10 +25,10 @@ $(function() {
     $('.checkbox-filters').on('change', 'input[type=checkbox]', () => {
         filterItems();
     });
-    const checkedAttributes ={};
+
     const filterItems = () => {
         // store for attributes
-        checkedAttributes = {
+        const checkedAttributes = {
             size: [],
             gender: [],
             type: []
@@ -81,7 +81,6 @@ $(function() {
     // Clear filter items
     $('.clear-filter').on('click', e => {
         e.preventDefault();
-        checkedAttributes = {};
 
         filterItems();
     })
