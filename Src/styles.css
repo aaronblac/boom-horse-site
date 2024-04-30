@@ -449,6 +449,9 @@ textarea:focus-visible {
   .w-xl-50 {
     width: 50% !important;
   }
+  .w-xl-75 {
+    width: 75% !important;
+  }
   .bdr-1-l-xl {
     border-top: none;
     border-left: 1px solid #425467;
