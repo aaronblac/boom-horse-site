@@ -180,6 +180,7 @@ input {
 input[type=radio],
 input[type=checkbox] {
   accent-color: #426767;
+  cursor: pointer;
 }
 input.input-field.thin {
   padding: 0.25rem;
@@ -188,6 +189,7 @@ input.input-field.thin {
   font-size: 0.875rem;
   font-weight: 500;
   margin-bottom: .25rem;
+  pointer-events: none;
 }
 input.input-field,
 textarea.textarea-field {
