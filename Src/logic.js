@@ -85,11 +85,5 @@ $(function() {
         filterItems();
     })
 
-    //View item template
-    const viTemplate = $('.container--view-item').html();
-    const viRendered = Mustache.render(viTemplate, data.products);
-    viTemplate = viRendered;
-    
-    
 
 });
