@@ -53,6 +53,12 @@ $(function() {
             Object.keys(checkedAttributes).forEach(attribute => {
             const values = checkedAttributes[attribute];
             const itemValue = item.data(attribute);
+
+            //If none are checked show all
+            if(values.length === 0){
+                showItem = true;
+                return;
+            }
         
             // If "All" is selected, skip hiding for this attribute
             if (itemValue === 'All' || values.includes('All')) {
@@ -71,7 +77,13 @@ $(function() {
   
     };
 
+    // Clear items
+    $('.clear-items').on('click', e => {
+        e.preventDefault();
+        checkedAttributes = {};
 
+        filterItems();
+    })
     //View item template
     const viTemplate = $('.container--view-item').html();
     const viRendered = Mustache.render(viTemplate, data.products);
