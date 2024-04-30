@@ -48,6 +48,7 @@ $(function() {
         $('.item').each(function() {
             const item = $(this);
             let hideItem = false; // Use a flag to track hiding
+            let showItem = true;
         
             // Check if item matches any checked attributes
             Object.keys(checkedAttributes).forEach(attribute => {
@@ -59,12 +60,12 @@ $(function() {
                 showItem = true;
                 return;
             }
-        
+            
             // If "All" is selected, skip hiding for this attribute
             if (itemValue === 'All' || values.includes('All')) {
                 return;
             }
-        
+            
             // Check if item attribute value doesn't match any checked value (excluding "All")
             if (values.length > 0 && !values.includes(itemValue)) {
                 hideItem = true; // Set flag to hide
@@ -77,13 +78,31 @@ $(function() {
   
     };
 
-    // Clear items
+    // Clear filter items
     $('.clear-filter').on('click', e => {
         e.preventDefault();
         checkedAttributes = {};
 
         filterItems();
     })
+
+    //Checkout message
+    const checkout = document.getElementById('Checkout');
+    const message = document.getElementById('Message');
+    checkout.addEventListener("click", event => {
+        event.preventDefault();
+        message.style.display = "block";
+    });
+    
+    // Remove Item Logic
+    document.querySelectorAll('.remove-item').forEach(button => {
+        button.addEventListener('click', function() {
+            const listItem = this.closest('li');
+            if (listItem) {
+                listItem.remove();
+            }
+        });
+    });
     //View item template
     const viTemplate = $('.container--view-item').html();
     const viRendered = Mustache.render(viTemplate, data.products);
