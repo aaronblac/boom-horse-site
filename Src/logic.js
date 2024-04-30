@@ -81,9 +81,7 @@ $(function() {
     // Clear filter items
     $('.clear-filter').on('click', e => {
         e.preventDefault();
-        $('input[type=checkbox]:checked').each(function(){
-            this.prop("checked", false);
-        })
+        $('.checkbox-filters input[type=checkbox]:checked').prop("checked", false);
     })
 
     //View item template

@@ -2,7 +2,7 @@
 const products = [
     {
         id: 1,
-        dataType: "Tshirts",
+        dataType: "TShirts",
         dataGender: "All",
         dataSize: "All",
         name: "Boom Horse T-shirt",
