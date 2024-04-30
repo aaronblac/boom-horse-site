@@ -86,23 +86,6 @@ $(function() {
         })
     })
 
-    //Checkout message
-    const checkout = document.getElementById('Checkout');
-    const message = document.getElementById('Message');
-    checkout.addEventListener("click", event => {
-        event.preventDefault();
-        message.style.display = "block";
-    });
-    
-    // Remove Item Logic
-    document.querySelectorAll('.remove-item').forEach(button => {
-        button.addEventListener('click', function() {
-            const listItem = this.closest('li');
-            if (listItem) {
-                listItem.remove();
-            }
-        });
-    });
     //View item template
     const viTemplate = $('.container--view-item').html();
     const viRendered = Mustache.render(viTemplate, data.products);
