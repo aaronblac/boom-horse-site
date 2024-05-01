@@ -368,6 +368,9 @@ textarea:focus-visible {
   z-index: -1;
   /* Ensure it's above other content */
 }
+.remove-item {
+  flex-shrink: 0;
+}
 /* Media Queries */
 @media screen and (min-width: 550px) {
   .grid-cols-2__sm {
