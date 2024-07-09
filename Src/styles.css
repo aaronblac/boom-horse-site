@@ -374,7 +374,8 @@ textarea:focus-visible {
 }
 
 .featured-items-short{
-    overflow-x: hidden;
+  overflow-x: hidden;
+  overflow-y:scroll;
 }
 
 /* Media Queries */
@@ -403,7 +404,6 @@ textarea:focus-visible {
   }
   .featured-items-short {
     max-height: 49rem;
-    overflow: scroll;
   }
   .grid-cols-1__lg {
     grid-template-columns: repeat(1, 1fr);
@@ -431,7 +431,6 @@ textarea:focus-visible {
   }
   .featured-items-short {
     max-height: 27rem;
-    overflow: scroll;
   }
   .grid-cols-5__xl {
     grid-template-columns: repeat(5, 1fr);
@@ -473,7 +472,6 @@ textarea:focus-visible {
 @media screen and (min-width: 1485px) {
   .featured-items-short {
     max-height: 27rem;
-    overflow: scroll;
   }
   .w-xxl-75 {
     width: 75%!important;
