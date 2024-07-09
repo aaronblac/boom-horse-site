@@ -372,6 +372,11 @@ textarea:focus-visible {
 .remove-item {
   flex-shrink: 0;
 }
+
+.featured-items-short{
+    overflow-x: hidden;
+}
+
 /* Media Queries */
 @media screen and (min-width: 550px) {
   .grid-cols-2__sm {
